@@ -1,0 +1,16 @@
+{
+  "name": "realter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "crawl": "node ./crawler/crawl.js",
+    "start": "concurrently \"cd backend && node server.js\" \"cd client && yarn start\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^4.0.1"
+  }
+}
