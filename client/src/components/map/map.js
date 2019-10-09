@@ -31,15 +31,12 @@ const MapComponent = compose(
                 enableRetinaIcons
                 gridSize={60}
             >
-                {props.realEstates && props.realEstates.map(realEstate => {
-                    console.log(realEstate)
-                    return (
-                        < Marker
-                            key={realEstate._id}
-                            position={{ lat: parseFloat(realEstate.cords[0]), lng: parseFloat(realEstate.cords[1]) }}
-                        />
-                    )
-                })}
+                {props.realEstates && props.realEstates.map(realEstate =>
+                    < Marker
+                        key={realEstate._id}
+                        position={{ lat: parseFloat(realEstate.cords[0]), lng: parseFloat(realEstate.cords[1]) }}
+                    />
+                )}
             </MarkerClusterer>
         </GoogleMap>
     )
