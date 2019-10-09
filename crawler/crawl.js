@@ -37,7 +37,7 @@ async function crawl() {
                 })
             )
             const realEstates = addExtraInfo(basicRealEstatesInfo, extraRealEstateInfo)
-            axios.post('http://localhost:3000/api/item',
+            axios.post('http://localhost:3001/item',
                 realEstates
             );
             if (!fs.existsSync("./tmp/rows.json"))
